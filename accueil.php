@@ -32,16 +32,15 @@
 
 <header>
 <container id="navbar_container">
-<div>
     <div class="navbar"><ul>
     <li><a href="accueil.php">Accueil</a></li>
         <li><a href="#carte">La Carte</a></li>
-        <li><a href="distributeur.php">Le Distributeur</a></li>
+        <li><a href="#distributeur">Le Distributeur</a></li>
       </ul>
     </div>
 </div>
 </container>
-<img class="logo" src="resources/img/logo.png"/>
+<img class="logo" src="resources/img/1.png"/>
 
 <!------SYMBOLES------>
 </header>
@@ -53,7 +52,7 @@
 <div class="maint_content">
 <h1 class="title1">Bienvenue à la Pizza du Bourg de Ouistreham !</h1>
         <p class="title2">Pizzas à emporter</p> <p class="title2">-</p><p class="title2"> Livraison disponible sur Ouistreham, Colleville-Montgomery, Saint-Aubin d'Arquenay et Hermanville !</p>
-<img class="pics1" src="resources/img/pics1_pizza.jpeg"></img>
+<img class="pics1" src="resources/img/pizzaccueil.jpg"></img>
 </div>
     
 
@@ -74,10 +73,10 @@
 </h2>
 </div>
 
-<h2 class="nospizzas"><u>NOS PIZZAS : </u></h2>
+<div class="part2">
+<h2 class="nospizzas">→ NOS PIZZAS : </h2>
 
 <?php foreach($pizzas as $pizzas): ?>
-
 <div class="card">
   <!--<img src="resources/img/pizzacard.png" alt="Pizzas" style="width:100%">-->
   <h1 class="nom"><?= $pizzas->nom ?></h1>
@@ -85,11 +84,31 @@
   <p class="desc"><?= $pizzas->description ?></p>
 </div>
 <?php endforeach; ?>
+</div>
 
+
+<h1 id="distributeur" class="distributeur-title">Le Distributeur</h1>
+<div class="distributeur">
+<img class="distributeur-img" src="resources/img/distributeur.jpg">
+<p class="distributeur-txt"><u>Voici notre nouveau distributeur automatique de pizzas !</u><br> <br> Imaginez-vous pouvoir déguster <u>une pizza fraîchement préparée</u>, avec vos ingrédients préférés, en quelques minutes seulement, où que vous soyez.
+
+<br><br> Notre distributeur offre une expérience culinaire pratique et personnalisée. Que vous soyez pressé lors d'une pause déjeuner ou que vous ayez une envie soudaine de pizza en rentrant chez vous après une longue journée, <u>notre distributeur répond à vos besoins.</u>
+
+<br> <br>De plus, <u>notre engagement envers la fraîcheur et la qualité des ingrédients</u> garantit que chaque bouchée de votre pizza sera délicieuse et satisfaisante.
+
+<br> <br>Alors, pourquoi ne pas venir découvrir par vous-même cette nouvelle façon de savourer vos pizzas préférées ? </P>
+
+</div>
+
+<div class="distributeur_maps">
+<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3087.8018540051257!2d-0.26816152322505!3d49.27434167134439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a67005f3577c3%3A0xff22d9fb362c3dcf!2sDistributeur%20de%20pizza%20du%20bourg!5e1!3m2!1sfr!2sfr!4v1712917759684!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!--
 <div class="btn">
    <a href="#"> <img  src="resources/img/arrowup.png"></img></a>
 </div>
-
+-->
 
 </body>
 </html>

@@ -42,20 +42,32 @@ html:nth-child(1){
 }
 
 .navbar {
-  display: block;
-  margin-top: auto;
-  margin-left: 380px;
+  display: inline;
+  margin-top: 10px;
   border-radius: 20px;
+
+}
+
+#navbar_container{
+
+}
+
+ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
 }
 
 header ul {
   padding-left: 1px;
     list-style-type: none;
-    margin-left: 250px;
+    margin-left: 300px;
     overflow: hidden;
     background-color: rgb(19, 19, 19);
     border-radius: 40px;
-    position: absolute;
+    text-align: center;
+  
+    
   }
   
   header li {
@@ -63,7 +75,7 @@ header ul {
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
-    float: left;
+    float: left;  
 
   }
   
@@ -72,13 +84,13 @@ header ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    
   }
 
   
   /* Change the link color to #111 (black) on hover */
   header li a:hover {
-    display: block;
     background-color: white;
     border-radius:305px;
     color: #c43c1e;
@@ -129,12 +141,14 @@ header ul {
 }
 
 header {
-  background-color: #ff0000;
+  background-color: #DD323A;
+  position: relative;
 }
 
 .title1{
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .title2{
@@ -185,17 +199,20 @@ border: solid red;
   width: 250px;
 }
 
+u {
+  color:#DD323A;
+}
 
 .pics1 {
-width: 100%;
-display: block;
-align-items: center;
-position: relative;
+  width: 100%;
+  display: block;
+  align-items: center;
+  position: relative;
 }
 
 .carte{
   text-align: center;
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px #DD323A;
   margin: 100px
 }
 
@@ -207,20 +224,34 @@ position: relative;
   padding-top: 20px;
 }
 
+.part2{
+  padding-top: 15px;
+  background-color: #DD323A;
+  box-shadow: 0px 0px 40px 20px black;
+  padding-bottom: 25px;
+}
+
 .card {
-  box-shadow: 0 12px 10px 0 rgb(36, 35, 35);
-  max-width: 200px;
+  box-shadow: 0px 0px 15px 2px rgb(255, 255, 255);
+  max-width: 190px;
   margin: auto;
   text-align: center;
+  align-items: center;
   font-family: arial;
   display: inline-block;
   vertical-align: middle;
   position: relative;
   margin: 10px;
-  margin-left: 55px;
+  border-radius: 10%;
+  margin-left: 54px;
   margin-bottom: 15px;
-  border-bottom: solid 1px white;
-  border-top: solid 1px white;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+  border-top: solid 5px white;
+  border-left: solid 5px white;
+  color: white;
+  box-shadow: -10px -10px 15px 1px rgb(224, 219, 219);
+  text-shadow: 0 0 12px rgb(255, 255, 255);
 }
 
 .card h1{
@@ -234,27 +265,51 @@ position: relative;
 }
 
 .price {
-  color: grey;
+  color: white;
   font-size: 17px;
 }
 
+.card::before {
+  color: white;
+  transition: 0.5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.card:hover::before{
+  transition: 0.5s;
+    transform: scale(1.1);
+}
+
 .card:hover {
-  transition: ease-in-out 0.5s;
+  cursor: pointer;
+  transition: ease-in-out 90ms;
+  border-top: none;
+  border-left: none;
+  border-bottom: solid 5px white;
+  border-right: solid 5px white;
+  color: white;
+  box-shadow: 10px 10px 15px 1px rgb(218, 211, 211);
+  text-shadow: 0 0 12px rgb(165, 154, 154);
+
 }
 
 .nospizzas{
   margin-left: 54px;
+  font-size: 26px;
+  color: white;
+  padding-bottom: 30px;
 }
 
 .italia {
   width: 140px;
   position: absolute;
-  padding-left: 150px;
-  margin-top: 40px;
+  padding-left: 70px;
+  margin-top: 55px;
 }
 
 .btn img{
-  width: 90px;
+  width: 50px;
 cursor: pointer;
 position: fixed;
 right: 20px;
@@ -262,3 +317,102 @@ bottom: 20px;
 transition: all 0.8s;
 }
 
+.distributeur {
+  padding-bottom: 10px;
+  margin-left: 54px;
+  margin-right: 54px;
+  display: flex;
+  position: relative;
+}
+
+
+.distributeur-title {
+  text-align: center;
+  border-bottom: solid 1px #DD323A;
+  margin: 100px;
+  padding-bottom: 30px;
+  font-size: 50px;
+}
+
+.distributeur-img{
+border-left: solid 7px rgb(0, 161, 0);
+border-top: solid 7px white;
+border-right: solid 7px #DD323A;
+border-bottom: solid 7px white;
+border-radius: 20%;
+transition: ease-in-out 0.2s;
+}
+
+.distributeur-img:hover {
+  border: solid 7px #DD323A;
+  border-radius: 20%;
+  transition: ease-in-out 0.2s;
+  }
+
+.distributeur-txt{
+padding-left: 20px;
+font-size: 22px;
+position: relative;
+padding-top: 25px;
+}
+
+.distributeur_maps{
+  margin-top: 70px;
+  text-align: center;
+  background-color: #DD323A;
+  box-shadow: 0px 0px 40px 20px black;
+}
+
+.maps {
+  width: 980px;
+  height: 700px;
+}
+
+@media screen and (max-width: 1050px){
+  ul {
+    opacity: 0%;
+  }
+
+  .card{
+    width: 150px;
+  }
+
+  .distributeur{
+    display: block;
+  }
+  .distributeur-img{
+    width: 450px;
+  }
+
+  .italia{
+    padding-left: 20px;
+  }
+
+  .maps{
+    width: 420px;
+    height: 600px;
+    }
+
+  .logo {
+    display: block;
+    margin: auto;
+    padding: 0px;
+  }
+
+}
+
+
+@media screen and (max-width: 1350px) and (min-width: 1050px){
+  .distributeur{
+    display: block;
+  }
+  .distributeur-img{
+    width: 650px;
+  }
+
+  .maps{
+  width: 1000px;
+  height: 400px;
+  }
+
+}
